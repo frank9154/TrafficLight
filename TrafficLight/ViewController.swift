@@ -21,6 +21,10 @@ final class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        startNextButton.layer.cornerRadius = 10
+        trafficLightRed.layer.cornerRadius = 50
+        trafficLightYellow.layer.cornerRadius = 50
+        trafficLightGreen.layer.cornerRadius = 50
         trafficLightRed.alpha = 0
         trafficLightYellow.alpha = 0
         trafficLightGreen.alpha = 0
@@ -35,10 +39,6 @@ final class ViewController: UIViewController {
             startNextButton.setTitle("NEXT", for: .normal)
             
         } else {
-            currentLightIndex += 1
-            if currentLightIndex >= lightColors.count {
-                currentLightIndex = 0
-            }
             
             switch currentLightIndex {
             case 0:
@@ -60,6 +60,10 @@ final class ViewController: UIViewController {
                 break
                 
             }
+            currentLightIndex += 1
+             if currentLightIndex >= lightColors.count {
+                 currentLightIndex = 0
+             }
             
         }
     }
