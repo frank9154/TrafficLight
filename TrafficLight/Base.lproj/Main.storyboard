@@ -16,26 +16,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillEqually" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="cSE-od-U5s">
-                                <rect key="frame" x="146" y="86" width="100" height="400"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="cSE-od-U5s">
+                                <rect key="frame" x="146" y="86" width="101" height="400"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P6F-yP-Kd4">
-                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P6F-yP-Kd4">
+                                        <rect key="frame" x="0.0" y="0.0" width="101" height="100"/>
                                         <color key="backgroundColor" systemColor="systemRedColor"/>
                                     </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zhd-Bd-rcC">
-                                        <rect key="frame" x="0.0" y="150" width="100" height="100"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zhd-Bd-rcC">
+                                        <rect key="frame" x="0.0" y="150" width="101" height="100"/>
                                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                                     </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ikg-iy-ns3">
-                                        <rect key="frame" x="0.0" y="300" width="100" height="100"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ikg-iy-ns3">
+                                        <rect key="frame" x="0.0" y="300" width="101" height="100"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                     </view>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="Zhd-Bd-rcC" firstAttribute="leading" secondItem="Ikg-iy-ns3" secondAttribute="leading" id="3i6-3r-aHZ"/>
+                                    <constraint firstItem="P6F-yP-Kd4" firstAttribute="leading" secondItem="cSE-od-U5s" secondAttribute="leadingMargin" id="frV-ai-4hB"/>
+                                    <constraint firstItem="P6F-yP-Kd4" firstAttribute="leading" secondItem="Zhd-Bd-rcC" secondAttribute="leading" id="r9u-HU-lTU"/>
+                                </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5OW-IN-m3p">
-                                <rect key="frame" x="140" y="692" width="113" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5OW-IN-m3p">
+                                <rect key="frame" x="152" y="565.66666666666663" width="89" height="48"/>
                                 <color key="backgroundColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -49,6 +53,15 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cSE-od-U5s" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="27" id="0mp-IM-hzG"/>
+                            <constraint firstItem="5OW-IN-m3p" firstAttribute="top" secondItem="cSE-od-U5s" secondAttribute="bottom" constant="79.666666666666629" id="8Oq-EU-14C"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5OW-IN-m3p" secondAttribute="bottom" multiplier="4:3" id="CG9-Jp-hVA"/>
+                            <constraint firstItem="5OW-IN-m3p" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PMX-jf-SV9"/>
+                            <constraint firstAttribute="bottom" secondItem="cSE-od-U5s" secondAttribute="bottom" constant="366" id="gC7-Za-YnQ"/>
+                            <constraint firstItem="cSE-od-U5s" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="146" id="oCs-Wo-Imm"/>
+                            <constraint firstItem="cSE-od-U5s" firstAttribute="centerX" secondItem="5OW-IN-m3p" secondAttribute="centerX" id="pXb-Aj-Zy5"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="startNextButton" destination="5OW-IN-m3p" id="iaP-kg-Bqg"/>
